@@ -257,6 +257,7 @@ bool DHT::read(bool force) {
   digitalWrite(_pin, LOW);
   switch (_type) {
   case DHT22:
+    delayMicroseconds(500); // suggetion for SI7021"
   case DHT21:
     delayMicroseconds(1100); // data sheet says "at least 1ms"
     break;
